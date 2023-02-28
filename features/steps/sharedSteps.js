@@ -5,10 +5,11 @@ const { log } = require(`${process.cwd()}/logger`);
 const urls = require(`${process.cwd()}/urls.json`);
 require(`${process.cwd()}/features/support/functions.js`);
 
-Given(/^Abro la pagina "(.*)"$/, async function (web) {
+Given(/^I open the page "(.*)"$/, async function (web) {
 
     try {
         await this.driver.get(urls[this.env[web]][web]);
+        
         await log.info('Ejecutando la prueba en el ambiente: ' + this.env[web]);
         await log.info('abriendo la pagina: ' + urls[this.env[web]][web]);
 
@@ -25,19 +26,25 @@ Given(/^Abro la pagina "(.*)"$/, async function (web) {
 
 });
 
-Given(/^Leo los datos de "(.*)"$/, async function (json) {
+Given(/^I read data from "(.*)"$/, async function (json) {
     this.page = require(`${process.cwd()}/features/pages/${json}.json`);
 });
 
-When(/^Hago click en "(.*)"$/, async function (elementKey) {
+When(/^I click on "(.*)"$/, async function (elementKey) {
     await clickElement(this.page, elementKey);
 });
 
-When(/^Lleno el campo "(.*)" con "(.*)"$/, async function (elementKey, texto) {
+
+
+When(/^I populate the field "(.*)" with "(.*)"$/, async function (elementKey, texto) {
     await llenarCampo(this.page, elementKey, texto);
 });
 
-When('Lleno los siguientes campos', async function (datatable) {
+When(/^Espero "(.*)" segundos$/, async function (seconds) {
+    await this.driver.sleep(20000);
+});
+
+When('I populate the following fields', async function (datatable) {
 
     for (var i = 0; i < datatable.rawTable.length; i++) {
         if (datatable.rawTable[i][1] != 'RANDOM') {

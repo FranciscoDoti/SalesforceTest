@@ -4,7 +4,7 @@ const { assert } = require('chai');
 const { By, Key, until } = require('selenium-webdriver');
 const { ExceptionHandler, exceptions } = require('winston');
 const { log } = require(`${process.cwd()}/logger`);
-const cantReintentos = 10;
+const cantReintentos = 20;
 
 async function buscarElemento(json, element) {
     var elementoEncontrado = false;
@@ -16,7 +16,7 @@ async function buscarElemento(json, element) {
         try {
             await log.info('Localizando elemento: ' + element);
             var webElement = await driver.wait(until.elementLocated(By.xpath(json[element].valor)), 5000, 5000, 5000);
-            await driver.sleep(4000);
+            await driver.sleep(200);
             elementoEncontrado = true;
 
         } catch (error) {
@@ -98,8 +98,8 @@ async function clickElement(json, element) {
 
         try {
             await log.info('Localizando elemento: ' + element);
-            var webElement = await driver.wait(until.elementLocated(By.xpath(json[element].valor)), 10000, 10000, 10000);
-            await driver.sleep(4000);
+            var webElement = await driver.wait(until.elementLocated(By.xpath(json[element].valor)), 10000);
+            await driver.sleep(200);
             await webElement.click();
             await log.info('Se hizo click en el elemento ' + element);
             elementoEncontrado = true;
@@ -194,8 +194,7 @@ async function assertText(json, elementKey, texto) {
 
         try {
             await log.info('Localizando elemento: ' + elementKey);
-            var webElement = await driver.wait(until.elementLocated(By.xpath(json[elementKey].valor)), 5000, 5000, 5000);
-            await driver.sleep(4500);
+            var webElement = await driver.wait(until.elementLocated(By.xpath(json[elementKey].valor)), 200, 200, 200);
             var textoExtraido = await webElement.getText();
             await log.info('Se extrajo el texto del elemento = ' + elementKey);
 
@@ -228,7 +227,7 @@ async function assertText(json, elementKey, texto) {
 
         }
     } else {
-        await assert(textoExtraido == texto, "El assert falló. Texto extraido: " + textoExtraido + ". Texto esperado: " + texto);
+        await assert(textoExtraido.includes(texto), "El assert falló. Texto extraido: " + textoExtraido + ". Texto esperado: " + texto);
     }
 
 }

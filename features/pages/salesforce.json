@@ -1,0 +1,54 @@
+{
+    "UserName": {
+        "identificador": "xpath",
+        "valor": "//input[@id='username']"
+    },
+    "Password": {
+        "identificador": "xpath",
+        "valor": "//input[@id='password']"
+    },
+    "BtnLogin": {
+        "identificador": "xpath",
+        "valor": "//input[@id='Login']"
+    },
+    "Accounts": {
+        "identificador": "xpath",
+        "valor": "//a[.='Accounts']"
+    },
+    "NewAccount": {
+        "identificador": "xpath",
+        "valor": "//div[contains(text(),'New')]"
+    },
+    "Manage": {
+        "identificador": "xpath",
+        "valor": "//a[.='Manage']"
+    },
+    "View Calendar": {
+        "identificador": "xpath",
+        "valor": "//a[.='View Calendar']"
+    },
+    "New Event": {
+        "identificador": "xpath",
+        "valor": "//button[contains(text(),'New Event')]"
+    },
+    "Subject":{
+        "identificador": "xpath",
+        "valor": "//label[text()='Subject']/..//input"
+    },
+    "Location":{
+        "identificador": "xpath",
+        "valor": "//label[.='Location']/../input"
+    },
+    "Description":{
+        "identificador": "xpath",
+        "valor": "//label[.='Description']/../div/textarea"
+    },
+    "SaveNewEvent":{
+        "identificador": "xpath",
+        "valor": "//button[.='Save']"
+    },
+    "ToastNewEventSaved":{
+        "identificador": "xpath",
+        "valor": "//div[@role='alertdialog']/div[contains(@class,'toastContent')]//span"
+    }
+}

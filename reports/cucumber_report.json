@@ -1,30 +1,40 @@
 [
   {
     "keyword": "Feature",
-    "name": "comprasCredito",
+    "name": "Calendar",
     "line": 1,
-    "id": "comprascredito",
+    "id": "calendar",
     "tags": [],
-    "uri": "features\\tests\\supervielle\\comprasCredito.feature",
+    "uri": "features/tests/salesforce/calendar.feature",
     "elements": [
       {
-        "id": "comprascredito;realizar-una-compra-con-tarjeta-de-crédito-en-9-cuotas",
+        "id": "calendar;verify-that-a-new-event-is-added-successfully",
         "keyword": "Scenario",
-        "line": 653,
-        "name": "Realizar una compra con tarjeta de crédito en 9 cuotas",
-        "tags": [
-          {
-            "name": "@PRUEBA",
-            "line": 652
-          }
-        ],
+        "line": 4,
+        "name": "Verify that a new event is added successfully",
+        "tags": [],
         "type": "scenario",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open the page \"salesforce\"",
             "match": {
-              "location": "features\\support\\hooks.js:7"
+              "location": "features/steps/sharedSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5916000000000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I read data from \"salesforce\"",
+            "match": {
+              "location": "features/steps/sharedSteps.js:29"
             },
             "result": {
               "status": "passed",
@@ -33,197 +43,80 @@
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "line": 654,
-            "name": "Abro la pagina \"supervielle\"",
+            "keyword": "And ",
+            "line": 7,
+            "name": "I populate the field \"UserName\" with \"franciscodotitexeira-gwml@force.com\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:8"
+              "location": "features/steps/sharedSteps.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 21088000000000000
+              "duration": 4092000000000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 655,
-            "name": "Leo los datos de \"supervielle\"",
+            "line": 8,
+            "name": "I populate the field \"Password\" with \"Yosoyyo123!\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:28"
+              "location": "features/steps/sharedSteps.js:39"
             },
             "result": {
               "status": "passed",
-              "duration": 3000000000000
+              "duration": 4039000000000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 656,
-            "name": "Hago click en \"IniciaSesion\"",
+            "line": 9,
+            "name": "I click on \"BtnLogin\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
+              "location": "features/steps/sharedSteps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 6509000000000000
+              "duration": 3409000000000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 657,
-            "name": "Lleno el campo \"Usuario\" con \"lqaautomation2021@gmail.com\"",
+            "line": 10,
+            "name": "I click on \"Manage\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:36"
+              "location": "features/steps/sharedSteps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 4178000000000000
+              "duration": 9052000000000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 658,
-            "name": "Lleno el campo \"Contraseña\" con \"prueba01\"",
+            "line": 11,
+            "name": "I click on \"View Calendar\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:36"
+              "location": "features/steps/sharedSteps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 4108000000000000
+              "duration": 254000000000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 659,
-            "name": "Hago click en \"IniciarSesion\"",
+            "line": 12,
+            "name": "I click on \"New Event\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
+              "location": "features/steps/sharedSteps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 6304000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 660,
-            "name": "Hago click en \"Categorias\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4103000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 661,
-            "name": "Hago click en \"Tecno\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 12750000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 662,
-            "name": "Hago click en \"ProductoTecno\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6643000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 663,
-            "name": "Hago click en \"AgregarAlCarrito\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4284000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 664,
-            "name": "Hago click en \"AceptoCondiciones\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 14112000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 665,
-            "name": "Hago click en \"Comprar\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7342000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 666,
-            "name": "Hago click en \"FinalizarCompra\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4158000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 667,
-            "name": "Hago click en \"IngresarNuevaTarjeta\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4137000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 668,
-            "name": "Hago click en \"Continuar\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 7889000000000000
+              "duration": 3945000000000000
             }
           },
           {
@@ -232,105 +125,67 @@
                 "rows": [
                   {
                     "cells": [
-                      "NroTarjeta",
-                      "4507990000004905"
+                      "Subject",
+                      "testSubject"
                     ]
                   },
                   {
                     "cells": [
-                      "NombreApellido",
-                      "JUANA SUAREZ"
+                      "Location",
+                      "Argentina"
                     ]
                   },
                   {
                     "cells": [
-                      "Vencimiento",
-                      "1223"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "CodSeguridad",
-                      "123"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "NroDocumento",
-                      "39169244"
+                      "Description",
+                      "this is an event added by an Automation test"
                     ]
                   }
                 ]
               }
             ],
             "keyword": "And ",
-            "line": 669,
-            "name": "Lleno los siguientes campos",
+            "line": 13,
+            "name": "I populate the following fields",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:40"
+              "location": "features/steps/sharedSteps.js:47"
             },
             "result": {
               "status": "passed",
-              "duration": 20874000000000000
+              "duration": 22314000000000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 675,
-            "name": "Hago click en \"Siguiente\"",
+            "line": 17,
+            "name": "I click on \"SaveNewEvent\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
+              "location": "features/steps/sharedSteps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 4145000000000000
+              "duration": 255000000000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 676,
-            "name": "Hago click en \"NueveCuotas\"",
+            "line": 18,
+            "name": "Verifico que el campo \"ToastNewEventSaved\" contenga el texto \"was created.\"",
             "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
+              "location": "features/steps/sharedSteps.js:85"
             },
             "result": {
               "status": "passed",
-              "duration": 4134000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 677,
-            "name": "Hago click en \"Pagar\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4192000000000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 678,
-            "name": "Verifico que el campo \"EstadoDeCompraExitosa\" contenga el texto \"¡Listo!\"",
-            "match": {
-              "location": "features\\steps\\sharedSteps.js:78"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9614000000000000
+              "duration": 5104000000000000
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "features\\support\\hooks.js:30"
+              "location": "features/support/hooks.js:35"
             },
             "result": {
               "status": "passed",
@@ -341,11 +196,11 @@
             "keyword": "After",
             "hidden": true,
             "match": {
-              "location": "features\\support\\hooks.js:15"
+              "location": "features/support/hooks.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 3000000000000
+              "duration": 2000000000000
             }
           }
         ]

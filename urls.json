@@ -1,6 +1,7 @@
 {
     "dev": {
         "itau": "https://itaupy-uat.aper.cloud",
-        "supervielle": "https://supervielle-uat.aper.com/"
+        "supervielle": "https://supervielle-uat.aper.com/",
+        "salesforce": "https://aaa29.lightning.force.com/lightning/page/home"
     }
 }

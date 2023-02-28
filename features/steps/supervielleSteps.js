@@ -5,19 +5,25 @@ const { assert } = require('chai');
 const { Driver } = require('selenium-webdriver/chrome');
 const { log } = require(`${process.cwd()}/logger`);
 const urls = require(`${process.cwd()}/urls.json`);
+const { By, Key, until } = require('selenium-webdriver');
 require(`${process.cwd()}/features/support/functions.js`);
 
-When(/^Hago click en un producto con precio mayor a "(.*)"$/, async function (precio) {
+When(/^Hago click en ACCOUNTS$/, async function () {
 
-    var encontreUnProductoMayorA10000 = false;
-    var vectorDePreciosDeProductos = this.driver.findElements(By.xpath(''));
-    var i = 0;
-    while ((encontreUnProductoMayorA10000 == false) && (i > vectorDePreciosDeProductos.length)) {
-        var textoDelPrecio = await vectorDePreciosDeProductos[i].getText();
-        if (parseInt(textoDelPrecio) > 10000) {
-            encontreUnProductoMayorA10000 = true;
-        }
-        i++;
+    var winHandles= await this.driver.getAllWindowHandles();
+    await console.log(winHandles)
+
+    var element = await this.driver.findElement(By.xpath('//a[@title="Accounts"]'))
+    this.driver.actions().moveToElement(element).click().build().perform();
+    try {
+      await element.click();  
+    } catch (error) {
+      await element.click();
     }
-    await vectorDePreciosDeProductos[i - 1].click();
+    
+
+
+
+
+    
 })

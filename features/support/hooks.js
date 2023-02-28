@@ -4,11 +4,16 @@ const config = require(`${process.cwd()}/config.json`);
 const { getDriver } = require(`${process.cwd()}/driver.js`);
 var driver = getDriver();
 
-Before ( async function(scenario) {
 
-    await log.info('Empezando a ejecutar: ' + scenario.pickle.name);
-    
+BeforeAll ( async function() {
 
+  await log.info('Empezando a ejecutar: ');
+  
+
+})
+
+Before ('@PRUEBA and @Checkout', async function(scenario) {
+    await log.info('Empezando a ejecutar: ' );    
 })
 
 
@@ -21,7 +26,7 @@ After ( async function (scenario) {
 })
 
 AfterAll ( async function(){
-  await driver.close();
+  await driver.quit();
   await log.info( 'cerrando el navegador.')
 })
 
